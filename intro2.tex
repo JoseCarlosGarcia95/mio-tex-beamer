@@ -1,0 +1,50 @@
+\begin{frame}
+	\centering \LARGE \color{naranjaUCA} Introducción al sistema de líneas de espera
+\end{frame}
+\begin{frame}{Introducción al sistema de líneas de espera}
+	\begin{block}{Procesos de llegadas}
+		Definimos las llegadas como los clientes que llegan. Para este tipo de problemas solemos asumir que, en un instante dado, no puede haber más de una llegada.
+	\end{block}
+	\pause
+	Normalmente, un proceso de llegadas no se ve afectado por el número de clientes que presenta el sistema, excepto en algunos casos:
+	\begin{itemize}
+		\pause
+		\item \textbf{Modelos de origen finito:} Las llegadas están sacadas de una población pequeña.
+		\pause
+		\item \textbf{Razón:} La razón a la cual llegan los clientes a cierta instalación disminuye cuando ésta se llena.
+	\end{itemize} 
+\end{frame}
+
+
+\begin{frame}{Introducción al sistema de líneas de espera}
+	\begin{block}{Procesos de salida}
+		Una salida sucede cuando un cliente ha sido servido.
+	\end{block}
+	
+	\pause
+	Existen dos tipos de servidores:
+	\begin{itemize}
+		\pause
+		\item \textbf{Servidores en paralelo:} Si todos ofrecen el mismo tipo de servicio y un cliente sólo requiere pasar por un servidor para completar el servicio.
+		\pause
+		\item\textbf{Servidores en serie:} Cuando un cliente debe pasar por varios servidores antes de terminar el servicio.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Introducción al sistema de líneas de espera}
+	\begin{block}{Disciplinas de líneas de espera}
+		La disciplina explica el método usado para determinar el orden en el que se atiende a los clientes.
+	\end{block}
+	
+	\pause
+	\begin{itemize}
+		\item \textbf{FCFS:} Se atiende a los clientes según el orden en que llegan.
+		\pause
+		\item\textbf{LCFS:} Las llegadas más recientes son los primeros clientes en entrar al servicio.
+		\pause
+		\item\textbf{SIRO:} El siguiente cliente en pasar al servidor es elegido en forma aleatoria.
+		\pause
+		\item\textbf{Prioridad en las colas:} Clasifica cada llegada en una categoría. Cada categoría recibe luego un nivel de prioridad, y dentro de cada nivel de prioridad, los clientes entran en el servicio siguiendo FCFS.
+		
+	\end{itemize}
+\end{frame}

@@ -1,0 +1,135 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{default}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage{lipsum}
+
+% ==================================================================================
+% Tipos
+% ==================================================================================
+\usepackage[light,condensed,math]{kurier}
+
+
+% ==================================================================================
+%  Símbolos matemáticos
+% ==================================================================================
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\def\N{\ensuremath{\mathbb{N}}}
+\def\Z{\ensuremath{\mathbb{Z}}}
+\def\Q{\ensuremath{\mathbb{Q}}}
+\def\R{\ensuremath{\mathbb{R}}}
+\def\C{\ensuremath{\mathbb{C}}}
+
+
+% ==================================================================================
+%  Colores
+% ==================================================================================
+
+\usepackage[]{xcolor}
+
+\definecolor{azulUCA}{cmyk}{1.00, 0.00, 0.00, 0.51}
+\definecolor{naranjaUCA}{cmyk}{0.00, 0.51, 1.00, 0.00}
+\definecolor{grisUCA}{cmyk}{0.00, 0.00, 0.00, 0.65}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{darkjose}{HTML}{4a4a4a}
+
+% ==================================================================================
+%  Algunos diseños
+% ==================================================================================
+\usepackage{epigraph}
+
+\newcommand{\citainicial}[1]{
+	\raya
+	\begin{quotation}
+		\color{charcoal}{\textit{#1}}
+	\end{quotation}
+	\raya
+}
+
+\def\raya{
+	\par \hbox to
+	\linewidth{\hss \vrule width \textwidth height 0.2pt depth 0.5pt}
+	\par}
+
+\makeatletter
+
+\newcommand{\seccion}[1]{
+	\section*{\color{azulUCA}{#1}}
+}
+
+\newcommand{\subseccion}[1]{
+	\subsection*{\color{naranjaUCA}{#1}}
+}
+
+\usepackage[theorems,breakable]{tcolorbox}
+
+\tcbuselibrary{theorems}
+
+\newtcbtheorem{problema}{Problema}%
+{
+	colback=azulUCA!5,
+	colframe=azulUCA,
+	fonttitle=\bfseries
+}{pr}
+
+\newtcbtheorem{formulacion}{Formulación}%
+{
+	colback=naranjaUCA!5,
+	colframe=naranjaUCA,
+	fonttitle=\bfseries
+}{for}
+
+\newtcbtheorem{autores}{Autores}%
+{
+	colback=charcoal!5,
+	colframe=charcoal,
+	fonttitle=\bfseries
+}{aut}
+
+\addtobeamertemplate{background canvas}{\transboxin}{}
+% ==================================================================================
+%  Definiciones
+% ==================================================================================
+\title{Teoria de colas}
+\date{}
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	\begin{center}
+		\href{http://creativecommons.org/licenses/by-sa/3.0/es/}{\includegraphics[width=4em]{cc-by-sa}}
+	\end{center}
+\end{frame}
+
+\input{introduccion}
+
+\input{procesonm}
+
+\input{intro2}
+
+\input{kendalllee}
+
+\input{little}
+
+\input{mm1}
+
+\input{mm1c}
+
+\input{mms}
+
+\input{mg1}
+
+\input{download}
+
+\input{autores}
+
+\end{document}

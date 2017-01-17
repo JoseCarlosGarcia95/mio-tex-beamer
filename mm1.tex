@@ -1,0 +1,63 @@
+\begin{frame}
+	\centering \LARGE \color{naranjaUCA} Modelo de cola M/M/1
+\end{frame}
+\begin{frame}{M/M/1}
+	   Este modelo puede ser representado como un proceso  de nacimiento-muerte con los siguientes parámetros: \pause
+		$$\begin{array}{cc}
+		\lambda_j=\lambda & (j=0,1,...)\\ \pause
+		\mu_0=0 &  \\ \pause
+		\mu_j=\mu &  (j=1,2,...)\\
+		\end{array}$$ \pause
+		Sabiendo que $\pi_j=\pi_0 c_j$ tenemos: \pause
+			\begin{center}
+				$\pi_1=\pi_0\rho, \qquad \pi_2=\pi_0\rho, \qquad...,\qquad\pi_j=\pi_0\rho$
+				
+			\end{center} \pause
+			\hspace{0.5cm}Donde $\rho=\frac{\lambda}{\mu}$
+\end{frame}
+\begin{frame}{M/M/1}
+		Sabemos que 
+			\begin{center}
+			$1=\sum_{j=0}^{\infty}\pi_j=\pi_0(1+ \rho +\rho^2+\rho^3+...)$
+		\end{center} \pause
+		Asumiendo que $0\neq\rho<1$, llegamos a \pause
+		\\ 	\begin{center}
+			$\pi_0=1-\rho$
+		\end{center}
+		\pause
+		Por lo tanto: \pause
+		\begin{center}
+			$\pi_j=\rho^j(1-\rho)$
+		\end{center}
+\end{frame}
+\begin{frame}{M/M/1}
+	\begin{block}{Cálculo de L}
+	\begin{itemize}
+		\item
+		\begin{equation}
+		L=(1-\rho)\frac{\rho}{(1-\rho)^2}=\frac{\rho}{1-\rho}=\frac{\lambda}{\mu-\lambda}
+		\end{equation} \pause
+		\item
+			\begin{center}
+				$L_s=0\pi_0+1(\pi_1+\pi_2+...)=1-\pi_0=1-(1-\rho)=\rho$
+			\end{center} \pause
+			\item
+				\begin{center}
+					$L_q=L-L_s=\frac{\rho^2}{1-\rho}$
+				\end{center}
+				\end{itemize}
+		
+	\end{block}
+	
+\end{frame}
+\begin{frame}{M/M/1}
+
+		\begin{block}{Cálculo de W}
+		Usando las fórmulas de Little: \pause
+		\begin{itemize}
+			\item $W=\frac{L}{\lambda}=\frac{1}{\mu-\lambda}$ \pause
+			\item $W_q=\frac{L_q}{\lambda}=\frac{\lambda}{\mu(\mu-\lambda)}$ \pause
+			\item$W_s=\frac{L_s}{\lambda}=\frac{1}{\mu}$
+		\end{itemize}
+		\end{block}
+\end{frame}

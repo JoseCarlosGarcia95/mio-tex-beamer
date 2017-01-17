@@ -1,0 +1,30 @@
+\begin{frame}
+	\centering \LARGE \color{naranjaUCA} Modelo de cola M/G/1
+\end{frame}
+\begin{frame}{M/G/1}
+Debido a que $G$ no es exponencial no podemos modelar este tipo de colas un proceso de nacimiento-muerte. \\ \pause
+Utilizamos los resultados de Pollaczek y Khinchin para determinar $L_q$, $L$, $L_s$, $W_q$, $W$, $W_s$ \pause
+
+
+\begin{equation}
+L_q=\frac{\lambda^2 \sigma^2+\rho}{2(1-\rho)} ~ ~ ~ \rho=\frac{\lambda}{\mu}
+\end{equation}
+Como $W_s=\displaystyle\frac{1}{\mu}$, por Little tenemos:
+$L_s=\lambda\left(\displaystyle\frac{1}{\mu}\right)=\rho$. Como $L=L_s+L_q$ obtenemos que
+\begin{equation}
+L=L_q+\rho
+\end{equation}
+
+
+\end{frame}
+
+\begin{frame}{M/G/1}
+Nuevamente de las fórmulas de Little tenemos
+
+$$
+W_q=\frac{L_q}{\lambda}$$
+$$
+W=W_q+\frac{1}{\mu}
+$$
+
+\end{frame}
